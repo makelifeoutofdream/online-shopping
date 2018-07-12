@@ -22,18 +22,10 @@ public class PageController {
 			greeting="Hello Naresh";
 		}
 		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("greeting",greeting);
+		mv.addObject("title","Home");
+		mv.addObject("userClickHome",true);
 		return mv;
 	}
-	
-	@RequestMapping(value="/tester/{greeting}")
-	public ModelAndView test_1(@PathVariable String greeting) {
-		if(greeting==null) {
-			greeting="Hello Naresh";
-		}
-		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("greeting",greeting);
-		return mv;
-	}
+
 
 }
